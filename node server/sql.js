@@ -1,7 +1,7 @@
 module.exports = function(Connection, Request, app){
     var config = {
-        userName: 'sa',
-        password: 'sa',
+        userName: 'null',
+        password: 'null',
         server: 'localhost',
         port: 1444,
         options: {
@@ -10,14 +10,19 @@ module.exports = function(Connection, Request, app){
         }
     };
 
+    var atob = require('atob');
+
 
     app.get('/search', function(req, res, next) {
+        config.userName = atob(req.query.username);
+        config.password = atob(req.query.password);
         let connection = new Connection(config);
         let search = req.query.search;
         console.log(search);
         connection.on('connect', function(err){
             if(err){
                 console.log(err);
+                res.json({'result': 'bad login'});
             }else{
                 executeStatement(connection, search, function(err, rows){
                     if (err) {

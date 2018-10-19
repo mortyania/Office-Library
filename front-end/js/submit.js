@@ -1,13 +1,16 @@
 $(document).ready(function(){
+    let username = 'SW50ZWxsaWdlbnRMaWJyYXJ5';
+    let password = 'V2VsY29tZTEyMw==';
     $('#search-btn').click(function(){
        
         let search = $('#search').val();
+        
         $('#search').val('');
         
         let tablebody = "";
         $.getJSON(
             "http://127.0.0.1:8080/search", 
-            { search },
+            { search, username, password },
             function(data){
                 if(data['key1'] === 'No results found'){
                     $('#search').effect('shake', 'left', 10, 6);
@@ -128,7 +131,7 @@ $(document).ready(function(){
         let tablebody = "";
         $.getJSON(
             "http://127.0.0.1:8080/getUser", 
-            { employee_id },
+            { employee_id, username, password },
             function(data){
                 if(data['key1'] === 'No results found'){
                     //ENTER DATA FOR NO BOOKS ON LOAN

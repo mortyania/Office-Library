@@ -1,10 +1,12 @@
 $(document).ready(function(){
+    let username = 'SW50ZWxsaWdlbnRMaWJyYXJ5';
+    let password = 'V2VsY29tZTEyMw==';
     $('body').on('click', '#more-info', function(){
         let isbn = $(this).closest('tr').find('.isbn').text();
 
         $.getJSON(
             "http://127.0.0.1:8080/modal", 
-            { isbn },
+            { isbn, username, password },
             function(data){
                 let split = data['isbn'].split(' - ');
                 console.log(data['isbn'])
@@ -30,7 +32,7 @@ $(document).ready(function(){
         console.log(isbn);
         $.getJSON(
             "http://127.0.0.1:8080/loan", 
-            { isbn },
+            { isbn, username, password },
             function(data){
                 console.log(data);
                 let split = data['isbn'].split(' - ');
@@ -72,7 +74,7 @@ $(document).ready(function(){
         let employee_id = $('input#library-no').val();
         $.getJSON(
             "http://127.0.0.1:8080/reserve", 
-            { isbn, employee_id },
+            { isbn, employee_id, username, password },
             function(data){
                 console.log(data);
                 if(data["reply"] === "updated"){
@@ -103,7 +105,7 @@ $(document).ready(function(){
         //SEND A DELETE RECORD FUNCTION FOR THIS BOOK
         $.getJSON(
             "http://127.0.0.1:8080/deleteLoan", 
-            { isbn },
+            { isbn, username, password },
             function(data){
                 console.log(data);
                 window.location.reload();

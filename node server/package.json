@@ -9,7 +9,9 @@
   "author": "James Morton",
   "license": "ISC",
   "dependencies": {
+    "atob": "^2.1.2",
     "body-parser": "^1.18.3",
+    "btoa": "^1.2.1",
     "express": "^4.16.4",
     "mssql": "^4.2.1",
     "tedious": "^2.7.1"
