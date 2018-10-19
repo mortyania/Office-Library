@@ -1,0 +1,129 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar {
+    border: none;
+    width: 100%;
+}
+.navbar .navbar-brand {
+    padding-top: 0px;
+}
+
+.navbar .navbar-brand img {
+    padding: 0px 0px;
+    height: 40px;
+    max-height: 100%;
+    max-width: 100%;    
+}
+.navbar-brand{
+    padding: 0px 0px;
+    display: block;
+    float: none;
+}
+#s-m{
+    color: lightgray;
+    width: 10px;
+}
+#s-m:hover{
+    color: white;
+}
+
+#search-btn,
+#reserve-btn,
+#return-btn,
+#id-search-btn,
+#returned,
+#return-confirm,
+#return-cancel{
+    margin: auto;
+    width: 120px;
+    background-color: grey;
+}
+
+#return-btn{
+    margin-top: 5px !important;
+    margin-right: 10px;
+}
+
+#center-box{
+    padding: 15% 0 0 0;
+}
+#search-btn:hover,
+#refresh-btn:hover,
+#return-btn:hover,
+#id-search-btn:hover,
+#returned:hover,
+#return-confirm,
+#return-cancel,
+#new-user-btn:hover{
+    background-color: darkgray;
+}
+#more-info:hover{
+    background-color: rgb(207, 207, 207);
+}
+#search {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+#search-btn:active,
+#refresh-btn:active,
+#more-info:active {
+  background-color: grey;
+  box-shadow: 0 1px #666;
+  transform: translateY(1px);
+}
+@media only screen and (max-width: 800px){
+    #center-box{
+        padding: 10% 20% 0 20%;
+    }
+    #search{
+        width: 70%;
+    }
+    #foot-ids, #foot-email{
+        visibility: hidden;
+    }
+}
+
+#footer{
+    margin-bottom: 20px;
+}
+
+#center-table{
+    padding: 0px 0px;
+}
+#table-header{
+    line-height: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#table-title{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#refresh-btn,
+#new-user-btn{
+    margin: auto;
+    vertical-align: middle;
+    display: inline-block;
+    width: 120px;
+    background-color: grey;
+}
+#more-info{
+    display: block;
+    margin: auto;
+    width: 30px;
+    height: 25px;
+    background-color: rgb(168, 168, 168);
+}
+
+.mt-4,
+.my-4{
+    margin-top: 0rem !important;
+}
+.fade {
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 0.5s;
+}

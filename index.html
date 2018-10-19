@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+        <script src="js/submit.js"></script>
+        <script src="js/modal-fill.js"></script>
+        <title>iTest Hub Library</title>
+        <link rel="icon" href="img/rocket-outline.png">
+    </head>
+    <body style="background-color: #EDECEC">
+        <!--Header-->
+        <header>
+            <div class="navbar navbar-collapse navbar-dark bg-dark box-shadow" id="top-nav">
+                <div class="container d-flex justify-content-between " id="nav-container">
+                    
+                    <a class="navbar-brand" href="https://www.intelligent-ds.co.uk/">
+                            <img src="img/intelligent-delivery-solutions-logo-2017-white.png" class="img-responsive" alt="Intelligent Delivery Solutions Logo">
+                    </a>
+                    
+                    <div class="row ml-auto">
+                        <div class="col col-6 m-0 p-0">
+                            <button class="btn btn-sm btn-block mt-4 text-white" id="return-btn" type="button">Return Books</button> 
+                        </div>
+                        <div class="col col-2 m-0 p-0">
+                            <a href="https://www.facebook.com/ThisisIntelligent.ds/" class="nav-link" id="s-m"><i class="fa fa-facebook"></i></a>
+                        </div>
+                        <div class="col col-2 m-0 p-0">
+                            <a href="https://www.twitter.com/intelligent_ds" class="nav-link" id="s-m"><i class="fa fa-twitter"></i></a>
+                        </div>
+                        <div class="col col-2 m-0 p-0">
+                            <a href="https://www.linkedin.com/company-beta/11196556/" class="nav-link" id="s-m"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>                    
+                    
+                </div>
+            </div>
+        </header>
+        <!--Header-->
+        <!--Main-->
+        <div class="container-fluid">
+        <div class="row text-center mt-3" id="center">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                <form class="form-group" id="center-box">
+                    <h1 class="h3 mb-3 font-weight-normal text-dark">iHub Library</h1>
+                    <label for="Search" class="sr-only">Search</label>
+                    <input id="search" class="form-control mt-4" placeholder="Search Library" style="background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;" type="search">
+
+                    <button class="btn btn-sm btn-block mt-4 text-white" id="search-btn" type="button">Search</button>
+                </form>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>            
+        </div>
+        <!--Main--> 
+        <!--Footer-->
+        <div class="container-fluid">
+            <div class="row mt-5" id="footer">
+                <div class="col-sm-3">    
+                </div> 
+                <div class="col-sm-6">
+                    <!-- <ul class="list-style-none d-flex flex-wrap small" style="min-width: 600px"> -->
+                    <div class="row mt-5">
+                        <div class="col-sm-4 small" id="foot-ids">© 2018 Intelligent Delivery Solutions</div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4 text-center">
+                                <img class="center-block" src="img/rocket-outline.png" style="height: 20px;">
+                            </div>
+                            <div class="col-sm-4"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 small" id="foot-email">
+                            <div class="float-right">e:info@intelligent-ds.co.uk</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                </div>
+            </div>
+        </div>
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+          
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Header</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" style="display:none" id="loaning">Loaning Information</button>
+                    <button type="button" class="btn btn-default" style="display:none" id="book-out">Reserve</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+    </body>
+</html>
