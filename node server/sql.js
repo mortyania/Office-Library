@@ -1,4 +1,4 @@
-module.exports = function(Connection, Request, app){
+module.exports = function(Connection, Request, app, atob){
     var config = {
         userName: 'null',
         password: 'null',
@@ -8,14 +8,16 @@ module.exports = function(Connection, Request, app){
             encrypt: false,
             database: 'LIBRARY'
         }
-    };
+    };   
 
-    var atob = require('atob');
+    var getLogins = function(){
+        config.userName = atob(req.query.username);
+        config.password = atob(req.query.password);
+    }
 
 
     app.get('/search', function(req, res, next) {
-        config.userName = atob(req.query.username);
-        config.password = atob(req.query.password);
+        getLogins();
         let connection = new Connection(config);
         let search = req.query.search;
         console.log(search);
@@ -39,6 +41,7 @@ module.exports = function(Connection, Request, app){
     });   
     
     app.get('/modal', function(req, res, next){
+        getLogins();
         let connection = new Connection(config);
         let isbn = req.query.isbn;
         console.log(isbn);
@@ -61,6 +64,7 @@ module.exports = function(Connection, Request, app){
     });
 
     app.get('/loan', function(req, res){
+        getLogins();
         let connection = new Connection(config);
         let isbn = req.query.isbn;
         console.log(isbn);
@@ -82,6 +86,7 @@ module.exports = function(Connection, Request, app){
     });
 
     app.get('/reserve', function(req, res){
+        getLogins();
         let connection = new Connection(config);
         let isbn = req.query.isbn;
         let id = req.query.employee_id;
@@ -111,6 +116,7 @@ module.exports = function(Connection, Request, app){
     });
 
     app.get('/getUser', function(req, res){
+        getLogins();
         let connection = new Connection(config);        
         let id = req.query.employee_id;
         connection.on('connect', function(err, rows){
@@ -131,6 +137,7 @@ module.exports = function(Connection, Request, app){
     });
 
     app.get('/deleteLoan', function(req, res){
+        getLogins();
         let connection = new Connection(config);
         let isbn = req.query.isbn;
         let id = req.query.employee_id;

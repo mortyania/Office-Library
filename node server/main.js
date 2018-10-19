@@ -16,8 +16,10 @@ app.use(function(req, res, next) {
 });
 //Paths
 let path = require('path');
+//decryptor
+var atob = require('atob');
 //body
-require('./sql.js')(Connection, Request, app);
+require('./sql.js')(Connection, Request, app, atob);
 
 //app.listen(8080, () => console.log('Example app listening on port 8080'));
 let server = app.listen(8080, "127.0.0.1", function () {
